@@ -3,33 +3,150 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tax Res CRM — The CRM built for tax resolution firms</title>
-<meta name="description" content="Tax Res CRM runs your entire tax resolution firm: transcript analysis, IRS form generation, built-in calling, client self-scheduling, e-signature, payments, and a client portal — in one system.">
+<title>TaxRes CRM — The CRM built specifically for tax resolution firms</title>
+<meta name="description" content="TaxRes CRM replaces the disconnected stack of tools a resolution firm rents — CRM, phone, scheduler, e-signature, payments — with one platform built by a practicing EA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script src="/assets/js/config.js" defer></script>
 <script src="/assets/js/site.js" defer></script>
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taxrescrm.net/">
-<meta property="og:title" content="Tax Res CRM — The CRM built for tax resolution firms">
-<meta property="og:description" content="Tax Res CRM runs your entire tax resolution firm: transcript analysis, IRS forms, built-in calling, scheduling, e-signature, payments, and a client portal — one system.">
+<meta property="og:title" content="TaxRes CRM — The CRM built specifically for tax resolution firms">
+<meta property="og:description" content="TaxRes CRM replaces the disconnected stack of tools a resolution firm rents with one platform built by a practicing EA.">
 <meta property="og:image" content="https://taxrescrm.net/assets/img/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tax Res CRM — The CRM built for tax resolution firms">
-<meta name="twitter:description" content="Tax Res CRM runs your entire tax resolution firm.">
+<meta name="twitter:title" content="TaxRes CRM — Built specifically for tax resolution firms">
+<meta name="twitter:description" content="Built by a practicing Enrolled Agent. Used daily in a real resolution practice.">
 <meta name="twitter:image" content="https://taxrescrm.net/assets/img/og-image.png">
 <link rel="canonical" href="https://taxrescrm.net/">
-
-<!-- Favicons (add images to /assets/img/) -->
 <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TaxRes CRM",
+  "applicationCategory": "BusinessApplication",
+  "url": "https://taxrescrm.net",
+  "description": "CRM software built specifically for tax resolution firms, developed by a practicing Enrolled Agent.",
+  "offers": { "@type": "Offer", "url": "https://taxrescrm.net/pricing" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TaxRes CRM",
+    "url": "https://taxrescrm.net",
+    "email": "romy@taxrescrm.net"
+  }
+}
+</script>
+<style>
+/* ── Homepage-specific styles ───────────────────────── */
+
+/* Hero */
+.hero{padding:80px 24px 72px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:var(--maxw);margin:0 auto}
+.hero h1{font-size:clamp(2.4rem,4.8vw,3.8rem);line-height:1.04;letter-spacing:-.02em;font-weight:800;margin:16px 0 24px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--green)}
+.lede{font-size:17px;line-height:1.7;color:var(--mut);margin:0 0 32px;max-width:480px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.hero-note{font-size:13px;color:var(--mut);margin:0}
+
+/* Transcript card */
+.tcard{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 4px 32px rgba(20,33,58,.08)}
+.tcard-head{background:var(--ink);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.tcard-head .t{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:#8899bb;letter-spacing:.1em;text-transform:uppercase}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;background:var(--green-soft);color:var(--green);padding:4px 10px;border-radius:4px}
+.tcard-body{padding:18px}
+.trow{display:grid;grid-template-columns:44px 1fr auto;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.trow:last-of-type{border-bottom:none}
+.trow .code{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--mut)}
+.trow.flag .code,.trow.flag .desc{color:var(--red);font-weight:600}
+.trow .amt{font-family:'IBM Plex Mono',monospace;text-align:right;color:var(--ink)}
+.tout{background:#f7f9fc;border-radius:8px;padding:12px 14px;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.75rem;line-height:2;color:var(--ink)}
+.tout .k{color:var(--green);font-weight:600}
+
+/* Tools replaced strip */
+.strip{background:var(--ink);padding:28px 24px}
+.strip .wrap{display:flex;align-items:center;gap:32px;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto}
+.lead-line{color:#fff;font-size:1rem;font-weight:700;white-space:nowrap}
+.strip ul{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap;margin:0;padding:0}
+.strip li{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:#5577aa;letter-spacing:.05em}
+.strip s{text-decoration-color:#5577aa}
+
+/* Feature section */
+.features{padding:80px 24px}
+.sec-head{margin-bottom:40px;max-width:640px}
+.sec-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:800;margin:0 0 12px;color:var(--ink);line-height:1.1}
+.sec-head p{font-size:16px;color:var(--mut);line-height:1.65;margin:0}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.fcard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;position:relative;transition:box-shadow .15s,transform .15s}
+.fcard:hover{box-shadow:0 6px 24px rgba(20,33,58,.1);transform:translateY(-2px)}
+.fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--green);border-radius:10px 10px 0 0}
+.fcard.hot::before{background:var(--red)}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:10px}
+.fcard h3{font-size:1.05rem;font-weight:700;margin:0 0 10px;color:var(--ink)}
+.fcard p{font-size:14px;line-height:1.65;color:var(--mut);margin:0 0 14px}
+.fcard a.more{font-size:13px;color:var(--green);font-weight:600;text-decoration:none}
+.fcard a.more:hover{text-decoration:underline}
+
+/* How it works */
+.howitworks{padding:80px 24px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:40px;position:relative}
+.steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:2px;background:var(--line);z-index:0}
+.step{text-align:center;position:relative;z-index:1;padding:0 16px}
+.step-num{width:56px;height:56px;border-radius:50%;background:var(--ink);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.9rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step h3{font-size:.95rem;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.step p{font-size:13px;line-height:1.6;color:var(--mut);margin:0}
+
+/* Builder credibility */
+.builder{padding:80px 24px;background:var(--ink)}
+.builder-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;max-width:var(--maxw);margin:0 auto}
+.builder h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#fff;line-height:1.1;margin:0 0 20px}
+.builder p{font-size:15px;line-height:1.75;color:#a0b0c0;margin:0 0 16px}
+.builder .cred{list-style:none;padding:0;margin:0;border-left:3px solid var(--green);padding-left:20px}
+.builder .cred li{font-family:'IBM Plex Mono',monospace;font-size:.82rem;line-height:2.1;color:#DDE2EE}
+.builder .cred li::before{content:'— ';color:var(--green)}
+.builder-cta{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+.builder-cta a.btn{background:var(--green);border-color:var(--green);align-self:flex-start}
+.builder-cta .note{font-size:13px;color:#607080}
+
+/* Trust band */
+.trust-band{padding:56px 24px;border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:36px;text-align:center}
+.trust-item .icon{font-size:28px;margin-bottom:12px}
+.trust-item h3{font-size:.9rem;font-weight:700;color:var(--ink);margin:0 0 6px}
+.trust-item p{font-size:13px;color:var(--mut);line-height:1.55;margin:0}
+
+/* Final CTA */
+.final-cta{padding:96px 24px;text-align:center;background:var(--paper)}
+.final-cta h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--ink);margin:0 0 16px;line-height:1.1}
+.final-cta p{font-size:17px;color:var(--mut);margin:0 0 36px;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto}
+.final-cta .sub{font-size:14px;color:var(--mut);margin-top:16px}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-grid,.builder-grid{grid-template-columns:1fr;gap:36px}
+  .fgrid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);gap:32px}
+  .steps::before{display:none}
+  .trust-grid{grid-template-columns:repeat(2,1fr)}
+  .strip .wrap{flex-direction:column;align-items:flex-start;gap:12px}
+}
+@media(max-width:560px){
+  .hero{padding:48px 24px 40px}
+  .fgrid{grid-template-columns:1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn,.hero-ctas .btn.ghost{width:100%;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 
+<!-- ── Nav ──────────────────────────────────────────── -->
 <nav>
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="TaxRes CRM home" style="display:flex;align-items:center;gap:10px;text-decoration:none"><img src="/assets/img/nav-icon.png" alt="" style="height:40px;width:40px;object-fit:contain;display:block"><span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.1rem;color:var(--ink);letter-spacing:-.01em">TaxRes<span style="color:var(--green)">CRM</span></span></a>
@@ -47,23 +164,24 @@
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <div class="wrap hero-grid">
+<!-- ── Hero ─────────────────────────────────────────── -->
+<header class="hero">
+  <div class="hero-grid wrap">
     <div>
-      <div class="eyebrow">Built for tax resolution. Nothing else.</div>
-      <h1>Your whole firm, <em>one system</em> — from first call to resolved case.</h1>
-      <p class="lede">Tax Res CRM replaces the stack of tools a resolution firm rents — practice CRM, phone system, scheduler, e-signature, payment processor — with one platform that actually understands IRS work.</p>
+      <p class="eyebrow">Built for tax resolution. Nothing else.</p>
+      <h1>Your whole firm,<br><em>one system</em> —<br>from first call to<br>resolved case.</h1>
+      <p class="lede">TaxRes CRM replaces the stack of disconnected tools a resolution firm rents — practice CRM, phone system, scheduler, e-signature, payment processor — with one platform that actually understands IRS work.</p>
       <div class="hero-ctas">
         <a class="btn" data-link="book" href="#">Book a Demo</a>
-        <a class="btn ghost" href="#features">See what it does</a>
+        <a class="btn ghost" href="/features">See what it does</a>
       </div>
       <p class="hero-note">Live walkthrough with the builder — a practicing Enrolled Agent, not a sales rep.</p>
     </div>
 
-    <div class="tcard" role="img" aria-label="Example: an IRS account transcript analyzed automatically, with a lien flagged and a resolution path produced">
+    <div class="tcard" role="img" aria-label="Example IRS account transcript parsed automatically, with lien flagged and CSED calculated">
       <div class="tcard-head">
-        <span class="t">ACCOUNT TRANSCRIPT · 1040 · 2022</span>
-        <span class="badge">PARSED AUTOMATICALLY</span>
+        <span class="t">Account Transcript · 1040 · 2022</span>
+        <span class="badge">Parsed Automatically</span>
       </div>
       <div class="tcard-body" aria-hidden="true">
         <div class="trow"><span class="code">150</span><span class="desc">Tax return filed</span><span class="amt">$41,230.00</span></div>
@@ -81,7 +199,8 @@
   </div>
 </header>
 
-<section class="strip" aria-label="Tools Tax Res CRM replaces">
+<!-- ── Tools replaced ────────────────────────────────── -->
+<section class="strip" aria-label="Tools TaxRes CRM replaces">
   <div class="wrap">
     <span class="lead-line">One login instead of five invoices.</span>
     <ul>
@@ -94,79 +213,188 @@
   </div>
 </section>
 
+<!-- ── Features ──────────────────────────────────────── -->
 <main>
 <section class="features" id="features">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Every step of a resolution case, already wired in.</h2>
-      <p>General-purpose CRMs make you build tax resolution on top. This one starts there.</p>
+      <p class="eyebrow">What It Does</p>
+      <h2>Every step of a resolution case, already built in.</h2>
+      <p>General CRMs make you build tax resolution on top of them. TaxRes CRM starts there.</p>
     </div>
     <div class="fgrid">
+
       <div class="fcard hot">
-        <span class="tag">Transcripts</span>
+        <span class="tag">IRS Workflows</span>
         <h3>Transcript analysis</h3>
-        <p>Import IRS account transcripts and get balances with accruals, CSED estimates, and automatic flags for liens, levies, unfiled SFRs, and installment or CNC status — parsed in seconds, not read line by line.</p>
+        <p>Import IRS account transcripts and get balances with accruals, CSED estimates, and automatic flags for liens, levies, unfiled SFRs, and notice streams — parsed in seconds.</p>
+        <a class="more" href="/features/irs-workflows">See IRS tools →</a>
       </div>
+
       <div class="fcard">
         <span class="tag">Forms</span>
         <h3>IRS &amp; state form generation</h3>
-        <p>Pre-filled 2848s, 8821s, and 433-series forms straight from the client file, plus state POAs with cover pages — sent for e-signature in the same motion.</p>
+        <p>Pre-filled 2848s, 8821s, and 433-series forms from the client file. State POAs with cover pages. Send for e-signature in the same motion.</p>
+        <a class="more" href="/features/document-portal">See document tools →</a>
       </div>
+
       <div class="fcard">
-        <span class="tag">Calling</span>
+        <span class="tag">Communications</span>
         <h3>Built-in phone, SMS &amp; fax</h3>
-        <p>A real multi-agent phone system inside the CRM: inbound routing, IVR, voicemail, recordings, and AI call recaps — every call logged to the client file automatically.</p>
+        <p>A real multi-agent phone system inside the CRM: inbound routing, IVR, voicemail, and AI call recaps — every call logged to the client file automatically.</p>
+        <a class="more" href="/features/client-management">See communication tools →</a>
       </div>
+
       <div class="fcard">
         <span class="tag">Scheduling</span>
         <h3>Client self-scheduling</h3>
-        <p>Clients book their own consultations from a public link — reminders, reschedules, and calendar sync included. You send a link; the calendar fills itself.</p>
+        <p>Clients book their own appointments from a public link. Confirmations, reminders, and reschedules are handled automatically. No back-and-forth.</p>
+        <a class="more" href="/features/scheduler">See the scheduler →</a>
       </div>
+
       <div class="fcard">
-        <span class="tag">Money</span>
-        <h3>Payments &amp; installment billing</h3>
-        <p>Charge cards, save payment methods, send payment links, and run installment plans — with receivables that reconcile themselves against invoices.</p>
+        <span class="tag">Automation</span>
+        <h3>Workflows &amp; follow-ups</h3>
+        <p>Build sequences that assign tasks, send follow-up emails, request documents, and move cases forward — triggered by the events that matter to your practice.</p>
+        <a class="more" href="/features/automation">See automation →</a>
       </div>
+
       <div class="fcard">
         <span class="tag">Clients</span>
         <h3>Client portal &amp; e-signature</h3>
-        <p>A branded portal where clients sign agreements, complete financial intake, upload documents, and see status — every action written back to their file as a note.</p>
+        <p>A secure portal where clients sign agreements, upload documents, complete financial intake, and view case status — every action written to their file.</p>
+        <a class="more" href="/features/document-portal">See the portal →</a>
+      </div>
+
+    </div>
+    <div style="margin-top:32px;text-align:center">
+      <a href="/features" style="font-size:15px;color:var(--green);font-weight:600;text-decoration:none">View all features →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── How it works ───────────────────────────────────── -->
+<section class="howitworks">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How a Case Moves</p>
+      <h2>From first call to resolved case — everything connected.</h2>
+      <p>TaxRes CRM is organized around the client file, not disconnected modules. Every action stays attached to the matter it belongs to.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Lead comes in</h3>
+        <p>Inbound call, booked appointment, or web form — a lead record is created automatically with the full communication history.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Case opens</h3>
+        <p>Convert to a client. Transcripts are imported, the 2848 is pre-filled and sent for e-signature, and the intake form goes to the client portal.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Resolution work</h3>
+        <p>Tasks, deadlines, IRS correspondence, notices, and calls all live in one place. Workflows handle the follow-ups. Nothing slips.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Case closes</h3>
+        <p>Invoice sent, payment collected, resolution documented. The full case history remains in the file. Time and billing reconciled.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="builder" id="builder">
-  <div class="wrap">
-    <div class="builder-in">
-      <div>
-        <h2>Built by a practitioner who got tired of duct tape.</h2>
-        <p>Tax Res CRM wasn't designed in a product meeting. It was built inside a working tax resolution practice by an Enrolled Agent who needed his own firm to run on it every day — which means the workflows match how resolution work actually happens.</p>
-        <p>When you request a demo, you talk to the person who built it. When you need something changed, so does he.</p>
+<!-- ── Builder credibility ────────────────────────────── -->
+<section class="builder" aria-labelledby="builder-heading">
+  <div class="builder-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--green)">Who Built This</p>
+      <h2 id="builder-heading">Built by a practicing tax-resolution professional.<br>Refined every day through real client work.</h2>
+      <p>TaxRes CRM wasn't designed in a product meeting. It was built inside a working tax resolution practice by an Enrolled Agent who needed his own firm to run on it every day.</p>
+      <p>That means the workflows match how resolution work actually happens — not how a software team imagined it might. Every feature exists because it was needed in a live case.</p>
+      <p>When you book a demonstration, you speak directly with the builder — not a salesperson reading from a script.</p>
+      <div class="builder-cta">
+        <a class="btn" data-link="book" href="#">Book a Demo</a>
+        <span class="note">Live walkthrough with the builder — a practicing Enrolled Agent, not a sales rep.</span>
       </div>
-      <ul class="cred">
-        <li>Runs a live tax resolution practice daily</li>
-        <li>Every action on a file writes a note. No exceptions.</li>
-        <li>Your firm's branding on every page, email &amp; document</li>
-        <li>Direct line to the builder — not a ticket queue</li>
-      </ul>
+    </div>
+    <ul class="cred">
+      <li>Runs a live tax resolution practice daily</li>
+      <li>Every action on a file writes a note — no exceptions</li>
+      <li>Role-based permissions for every team member</li>
+      <li>Your firm's branding on every document, email, and portal</li>
+      <li>QuickBooks and Xero integrations built in</li>
+      <li>Built-in phone, SMS, and fax — no third-party dialer</li>
+      <li>Client e-signature and document portal included</li>
+      <li>Direct line to the builder — not a ticket queue</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── Trust band ─────────────────────────────────────── -->
+<section class="trust-band">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <p class="eyebrow">Why Firms Trust TaxRes CRM</p>
+      <h2>Built for the work. Used in the work. Refined by the work.</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="icon" aria-hidden="true">🔒</div>
+        <h3>Role-based access</h3>
+        <p>Control what each staff member can see and do. Access matches responsibility.</p>
+      </div>
+      <div class="trust-item">
+        <div class="icon" aria-hidden="true">📁</div>
+        <h3>Secure document handling</h3>
+        <p>Client documents stay in the client file — not scattered across email inboxes.</p>
+      </div>
+      <div class="trust-item">
+        <div class="icon" aria-hidden="true">📋</div>
+        <h3>Full audit trail</h3>
+        <p>Every action on a file is recorded. Know what happened, when, and who did it.</p>
+      </div>
+      <div class="trust-item">
+        <div class="icon" aria-hidden="true">🔄</div>
+        <h3>Updated continuously</h3>
+        <p>The builder uses this software every day. When the practice needs something, the product gets it.</p>
+      </div>
+    </div>
+    <div style="margin-top:32px;text-align:center">
+      <a href="/security" style="font-size:14px;color:var(--green);font-weight:600;text-decoration:none">Read how access and documents are handled →</a>
     </div>
   </div>
 </section>
 
-<section class="cta" id="demo">
-  <div class="wrap">
-    <h2>See it on your firm's letterhead.</h2>
-    <p>Demos run on a live system branded as <em>your</em> firm — your name, your logo, your workflows. Thirty minutes, no deck.</p>
-    <a class="btn" data-link="book" href="#">Book a Demo</a>
+<!-- ── Final CTA ──────────────────────────────────────── -->
+<section class="final-cta">
+  <div class="wrap" style="max-width:720px">
+    <p class="eyebrow">Get Started</p>
+    <h2>See TaxRes CRM handle a real resolution case.</h2>
+    <p>Walk through the client file, transcript tools, IRS forms, tasks, communications, documents, and scheduling process — with the person who built it and uses it every day.</p>
+    <a class="btn" data-link="book" href="#" style="font-size:16px;padding:16px 48px">Book a Demo</a>
+    <p class="sub">Live walkthrough with the builder — a practicing Enrolled Agent, not a sales rep.</p>
   </div>
 </section>
+
 </main>
 
+<!-- ── Footer ─────────────────────────────────────────── -->
 <footer>
-  <div class="wrap">
-    <span>© 2026 TaxRes CRM. All rights reserved. &nbsp;·&nbsp; <a href="/privacy" style="color:inherit;opacity:.7">Privacy</a> &nbsp;·&nbsp; <a href="/terms" style="color:inherit;opacity:.7">Terms</a></span>
-    <span><a data-email="contact" href="#">romy@taxrescrm.net</a></span>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#8899aa;padding:28px 24px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <a href="/features" style="color:inherit;opacity:.7">Features</a>
+        <a href="/about" style="color:inherit;opacity:.7">About</a>
+        <a href="/pricing" style="color:inherit;opacity:.7">Pricing</a>
+        <a href="/resources" style="color:inherit;opacity:.7">Resources</a>
+        <a href="/contact" style="color:inherit;opacity:.7">Contact</a>
+      </div>
+      <span>© 2026 TaxRes CRM. All rights reserved. &nbsp;·&nbsp; <a href="/privacy" style="color:inherit;opacity:.7">Privacy</a> &nbsp;·&nbsp; <a href="/terms" style="color:inherit;opacity:.7">Terms</a> &nbsp;·&nbsp; <a href="/security" style="color:inherit;opacity:.7">Security</a></span>
+    </div>
+    <span><a data-email="contact" href="#" style="color:inherit;opacity:.7">romy@taxrescrm.net</a></span>
   </div>
 </footer>
 
