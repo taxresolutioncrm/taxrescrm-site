@@ -1,0 +1,7 @@
+window.TAXRES_CONFIG = {
+  SITE_NAME: "TaxRes CRM",
+  MARKETING_URL: "https://taxrescrm.net",
+  BOOK_URL: "https://taxresolutioncrm.github.io/taxcasereview-CRM/book",
+  APP_URL: "https://taxresolutioncrm.github.io/taxcasereview-CRM/login",
+  CONTACT_EMAIL: "romy@taxrescrm.net"
+};

@@ -8,128 +8,40 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#14213A; --ink-2:#2A3A5C; --paper:#F7F5F0; --card:#FFFFFF;
-  --line:#DDD6C7; --red:#B3372F; --green:#146B4A; --green-soft:#E7F2EC;
-  --mut:#5B617A; --maxw:1120px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px}
-h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.08;letter-spacing:-0.01em}
-a{color:inherit}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.mono{font-family:'IBM Plex Mono',monospace}
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/config.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
 
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:.55rem}
-.brand .tick{width:10px;height:10px;background:var(--green);border-radius:2px;display:inline-block}
-.nav-links{display:flex;gap:1.6rem;align-items:center}
-.nav-links a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink-2)}
-.nav-links a:hover{color:var(--ink)}
-.btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;padding:.72rem 1.35rem;border-radius:6px;border:1px solid var(--ink);transition:background .15s,color .15s}
-.btn:hover{background:var(--ink-2)}
-.btn.ghost{background:transparent;color:var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-.btn:focus-visible,a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taxrescrm.net/">
+<meta property="og:title" content="Tax Res CRM — The CRM built for tax resolution firms">
+<meta property="og:description" content="Tax Res CRM runs your entire tax resolution firm: transcript analysis, IRS forms, built-in calling, scheduling, e-signature, payments, and a client portal — one system.">
+<meta property="og:image" content="https://taxrescrm.net/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tax Res CRM — The CRM built for tax resolution firms">
+<meta name="twitter:description" content="Tax Res CRM runs your entire tax resolution firm.">
+<meta name="twitter:image" content="https://taxrescrm.net/assets/img/og-image.png">
+<link rel="canonical" href="https://taxrescrm.net/">
 
-/* ---------- hero ---------- */
-.hero{padding:72px 0 88px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:1.1rem}
-.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);font-weight:800;margin-bottom:1.2rem}
-.hero h1 em{font-style:normal;color:var(--green)}
-.hero p.lede{font-size:1.13rem;color:var(--mut);max-width:34rem;margin-bottom:1.8rem}
-.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap}
-.hero-note{margin-top:1rem;font-size:.85rem;color:var(--mut)}
-
-/* transcript card — signature element */
-.tcard{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 40px -18px rgba(20,33,58,.28);overflow:hidden}
-.tcard-head{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem;border-bottom:1px solid var(--line);background:#FCFBF8}
-.tcard-head .t{font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;letter-spacing:.08em;color:var(--ink-2)}
-.tcard-head .badge{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;color:var(--green);background:var(--green-soft);padding:.2rem .55rem;border-radius:99px}
-.tcard-body{padding:1rem 1.1rem 1.2rem;font-family:'IBM Plex Mono',monospace;font-size:.78rem;line-height:1.9}
-.trow{display:flex;gap:1rem;white-space:nowrap;opacity:0;animation:reveal .4s ease forwards}
-.trow .code{width:4.4ch;color:var(--ink-2);font-weight:600}
-.trow .desc{flex:1;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
-.trow .amt{color:var(--ink-2)}
-.trow.flag .code,.trow.flag .desc{color:var(--red);font-weight:600}
-.trow:nth-child(1){animation-delay:.15s}.trow:nth-child(2){animation-delay:.45s}
-.trow:nth-child(3){animation-delay:.75s}.trow:nth-child(4){animation-delay:1.05s}
-.trow:nth-child(5){animation-delay:1.35s}
-.tout{margin-top:1rem;border-top:1px dashed var(--line);padding-top:.9rem;opacity:0;animation:reveal .5s ease 1.9s forwards}
-.tout .k{color:var(--green);font-weight:600}
-.tout div{margin-bottom:.15rem}
-@keyframes reveal{to{opacity:1}}
-@media (prefers-reduced-motion: reduce){
-  .trow,.tout{animation:none;opacity:1}
-  html{scroll-behavior:auto}
-}
-
-/* ---------- replaces strip ---------- */
-.strip{background:var(--ink);color:#EDEBE4;padding:2.4rem 0}
-.strip .wrap{display:flex;gap:2rem;align-items:baseline;flex-wrap:wrap;justify-content:space-between}
-.strip .lead-line{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.25rem;color:#fff}
-.strip ul{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap}
-.strip li{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.04em;color:#B9C0D4}
-.strip li s{text-decoration-color:var(--red);text-decoration-thickness:2px}
-
-/* ---------- features ---------- */
-.features{padding:88px 0 40px}
-.sec-head{max-width:44rem;margin-bottom:3rem}
-.sec-head h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;margin-bottom:.8rem}
-.sec-head p{color:var(--mut);font-size:1.05rem}
-.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.fcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.5rem 1.4rem;position:relative}
-.fcard::before{content:"";position:absolute;top:0;left:1.4rem;width:44px;height:4px;background:var(--green);border-radius:0 0 3px 3px}
-.fcard.hot::before{background:var(--red)}
-.fcard h3{font-size:1.08rem;font-weight:700;margin-bottom:.55rem}
-.fcard p{font-size:.93rem;color:var(--mut)}
-.fcard .tag{font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);display:block;margin-bottom:.9rem}
-
-/* ---------- builder band ---------- */
-.builder{padding:72px 0}
-.builder-in{background:var(--ink);color:#EDEBE4;border-radius:14px;padding:3.2rem;display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
-.builder h2{color:#fff;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;margin-bottom:1rem}
-.builder p{color:#B9C0D4;font-size:1.02rem;margin-bottom:1rem}
-.builder .cred{border-left:3px solid var(--green);padding-left:1.2rem}
-.builder .cred li{list-style:none;font-family:'IBM Plex Mono',monospace;font-size:.82rem;line-height:2.1;color:#DDE2EE}
-.builder .cred li::before{content:"— ";color:var(--green)}
-
-/* ---------- cta ---------- */
-.cta{padding:40px 0 96px;text-align:center}
-.cta h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:800;margin-bottom:1rem}
-.cta p{color:var(--mut);max-width:34rem;margin:0 auto 2rem}
-footer{border-top:1px solid var(--line);padding:2rem 0;font-size:.85rem;color:var(--mut)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-footer a{color:var(--ink-2)}
-
-/* ---------- responsive ---------- */
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:40px}
-  .fgrid{grid-template-columns:1fr 1fr}
-  .builder-in{grid-template-columns:1fr;padding:2.2rem}
-  .nav-links a:not(.btn){display:none}
-}
-@media (max-width:560px){
-  .fgrid{grid-template-columns:1fr}
-  .hero{padding:48px 0 64px}
-  .tcard-body{font-size:.7rem}
-}
-</style>
+<!-- Favicons (add images to /assets/img/) -->
+<link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 </head>
 <body>
 
 <nav>
   <div class="wrap nav-in">
     <a class="brand" href="#top"><span class="tick" aria-hidden="true"></span>Tax&nbsp;Res&nbsp;CRM</a>
-    <div class="nav-links">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu" onclick="(function(b){var m=document.getElementById('nav-menu');var open=m.style.display==='flex';m.style.display=open?'none':'flex';b.setAttribute('aria-expanded',String(!open))})(this)">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-menu">
       <a href="#features">What it does</a>
       <a href="#builder">Who built it</a>
-      <a class="btn" href="mailto:romy@taxrescrm.net?subject=Demo%20request%20—%20Tax%20Res%20CRM">Request a demo</a>
+      <a href="/features">Features</a>
+      <a href="/about">About</a>
+      <a class="btn" data-link="book" href="#">Book a Demo</a>
     </div>
   </div>
 </nav>
@@ -141,7 +53,7 @@ footer a{color:var(--ink-2)}
       <h1>Your whole firm, <em>one system</em> — from first call to resolved case.</h1>
       <p class="lede">Tax Res CRM replaces the stack of tools a resolution firm rents — practice CRM, phone system, scheduler, e-signature, payment processor — with one platform that actually understands IRS work.</p>
       <div class="hero-ctas">
-        <a class="btn" href="mailto:romy@taxrescrm.net?subject=Demo%20request%20—%20Tax%20Res%20CRM">Request a demo</a>
+        <a class="btn" data-link="book" href="#">Book a Demo</a>
         <a class="btn ghost" href="#features">See what it does</a>
       </div>
       <p class="hero-note">Live walkthrough with the builder — a practicing Enrolled Agent, not a sales rep.</p>
@@ -245,15 +157,15 @@ footer a{color:var(--ink-2)}
   <div class="wrap">
     <h2>See it on your firm's letterhead.</h2>
     <p>Demos run on a live system branded as <em>your</em> firm — your name, your logo, your workflows. Thirty minutes, no deck.</p>
-    <a class="btn" href="mailto:romy@taxrescrm.net?subject=Demo%20request%20—%20Tax%20Res%20CRM&body=Firm%20name%3A%0ANumber%20of%20users%3A%0ACurrent%20tools%3A%0A">Request a demo</a>
+    <a class="btn" data-link="book" href="#">Book a Demo</a>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Tax Res CRM. All rights reserved.</span>
-    <span><a href="mailto:romy@taxrescrm.net">romy@taxrescrm.net</a></span>
+    <span>© 2026 TaxRes CRM. All rights reserved. &nbsp;·&nbsp; <a href="/privacy" style="color:inherit;opacity:.7">Privacy</a> &nbsp;·&nbsp; <a href="/terms" style="color:inherit;opacity:.7">Terms</a></span>
+    <span><a data-email="contact" href="#">romy@taxrescrm.net</a></span>
   </div>
 </footer>
 

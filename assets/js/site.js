@@ -1,0 +1,38 @@
+(function () {
+  function applyConfig() {
+    var cfg = window.TAXRES_CONFIG;
+    if (!cfg) return;
+
+    // data-link="book" -> BOOK_URL
+    // data-link="app"  -> APP_URL
+    document.querySelectorAll('[data-link]').forEach(function (el) {
+      var key = el.getAttribute('data-link');
+      if (key === 'book' && cfg.BOOK_URL) {
+        el.href = cfg.BOOK_URL;
+        el.target = '_blank';
+        el.rel = 'noopener noreferrer';
+      } else if (key === 'app' && cfg.APP_URL) {
+        el.href = cfg.APP_URL;
+        el.target = '_blank';
+        el.rel = 'noopener noreferrer';
+      }
+    });
+
+    // data-email="contact" -> mailto:CONTACT_EMAIL
+    document.querySelectorAll('[data-email]').forEach(function (el) {
+      var key = el.getAttribute('data-email');
+      if (key === 'contact' && cfg.CONTACT_EMAIL) {
+        el.href = 'mailto:' + cfg.CONTACT_EMAIL;
+        if (!el.textContent.trim() || el.textContent.trim() === cfg.CONTACT_EMAIL) {
+          el.textContent = cfg.CONTACT_EMAIL;
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyConfig);
+  } else {
+    applyConfig();
+  }
+})();
