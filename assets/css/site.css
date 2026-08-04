@@ -59,13 +59,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-f
   html{scroll-behavior:auto}
 }
 
-/* ---------- replaces strip ---------- */
-.strip{background:var(--ink);color:#EDEBE4;padding:2.4rem 0}
-.strip .wrap{display:flex;gap:2rem;align-items:baseline;flex-wrap:wrap;justify-content:space-between}
-.strip .lead-line{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.25rem;color:#fff}
-.strip ul{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap}
-.strip li{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.04em;color:#B9C0D4}
-.strip li s{text-decoration-color:var(--red);text-decoration-thickness:2px}
+
 
 /* ---------- features ---------- */
 .features{padding:88px 0 40px}
@@ -121,3 +115,11 @@ footer a{color:var(--ink-2)}
 }
 
 .btn.ghost:hover{background:#14213A;color:#C4A44A}
+/* ── Strip ───────────────────────────────────────────── */
+.strip{background:var(--ink);padding:36px 0}
+.strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.lead-line{font-family:'Bricolage Grotesque',sans-serif;color:#fff;font-size:1.15rem;font-weight:800;white-space:nowrap}
+.strip ul{display:flex;gap:32px;list-style:none;flex-wrap:nowrap;margin:0;padding:0}
+.strip li{font-family:'IBM Plex Mono',monospace;font-size:.8rem;white-space:nowrap;letter-spacing:.04em}
+.strip li span{color:#7788bb;text-decoration:line-through;text-decoration-color:#dd4444;text-decoration-thickness:2px;text-decoration-style:solid}
+@media(max-width:900px){.strip .wrap{flex-direction:column;align-items:flex-start;gap:14px}.strip ul{flex-wrap:wrap;gap:16px}}
