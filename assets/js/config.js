@@ -5,6 +5,6 @@ window.TAXRES_CONFIG = {
   APP_URL: "https://taxresolutioncrm.github.io/taxcasereview-CRM/login",
   CONTACT_EMAIL: "info@taxrescrm.net",
   GA4_ID: "G-M6J80B65LG",
-  CLARITY_ID: "",
+  CLARITY_ID: "xyck7g2mfl",
   BING_VERIFICATION: ""
 };
