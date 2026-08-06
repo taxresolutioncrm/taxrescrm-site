@@ -10,4 +10,10 @@
   <url><loc>https://taxrescrm.net/privacy/</loc><priority>0.4</priority></url>
   <url><loc>https://taxrescrm.net/terms/</loc><priority>0.4</priority></url>
   <url><loc>https://taxrescrm.net/resources/</loc><priority>0.8</priority></url>
+  <url><loc>https://taxrescrm.net/features/client-management/</loc><priority>0.8</priority></url>
+  <url><loc>https://taxrescrm.net/features/case-management/</loc><priority>0.8</priority></url>
+  <url><loc>https://taxrescrm.net/features/irs-workflows/</loc><priority>0.8</priority></url>
+  <url><loc>https://taxrescrm.net/features/document-portal/</loc><priority>0.8</priority></url>
+  <url><loc>https://taxrescrm.net/features/scheduler/</loc><priority>0.8</priority></url>
+  <url><loc>https://taxrescrm.net/features/automation/</loc><priority>0.8</priority></url>
 </urlset>
