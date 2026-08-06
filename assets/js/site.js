@@ -57,4 +57,10 @@
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window,document,"clarity","script",cfg.CLARITY_ID);
   }
+  if (cfg.BING_VERIFICATION) {
+    var bm = document.createElement('meta');
+    bm.name = 'msvalidate.01';
+    bm.content = cfg.BING_VERIFICATION;
+    document.head.appendChild(bm);
+  }
 })();
