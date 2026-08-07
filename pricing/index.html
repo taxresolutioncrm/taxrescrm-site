@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing | TaxRes CRM</title>
-<meta name="description" content="TaxRes CRM pricing — $65, $75, and $85 per user per month. Purpose-built for tax resolution firms.">
+<meta name="description" content="TaxRes CRM pricing — $65, $75, and $85 per user per month. Purpose-built for tax resolution firms. No setup fees, no contracts.">
 <link rel="canonical" href="https://taxrescrm.net/pricing">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taxrescrm.net/pricing">
@@ -36,6 +36,7 @@
 .plan-features li{font-size:.9rem;color:#2A3A5C;display:flex;align-items:flex-start;gap:10px;font-family:'Inter',sans-serif;line-height:1.4}
 .plan-features li::before{content:'';width:16px;height:16px;background:#146B4A;border-radius:50%;flex-shrink:0;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5l3 3 6-6' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:cover}
 .plan-features .inherited{color:#5B617A}
+.plan-features .inherited::before{background:#DDD6C7}
 .plan-cta{margin-top:auto}
 .plan-cta .btn{width:100%;text-align:center;padding:13px;font-size:.95rem;box-sizing:border-box}
 .plan-cta .btn.featured-btn{background:#C4A44A;border-color:#C4A44A;color:#14213A}
@@ -52,9 +53,33 @@
 .trust-item{display:flex;flex-direction:column;gap:4px}
 .trust-item strong{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:800;color:#14213A}
 .trust-item span{font-size:.82rem;color:#5B617A;font-family:'Inter',sans-serif}
+
+.migration-box{margin:52px 0 0;background:#F7F5F0;border:1.5px solid #DDD6C7;border-left:4px solid #14213A;border-radius:10px;padding:28px 32px;display:flex;align-items:flex-start;gap:20px}
+@media(max-width:640px){.migration-box{flex-direction:column;gap:14px}}
+.migration-icon{font-size:2rem;flex-shrink:0;line-height:1}
+.migration-box h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:800;color:#14213A;margin:0 0 6px}
+.migration-box p{font-size:.9rem;color:#5B617A;margin:0;line-height:1.6;font-family:'Inter',sans-serif}
+.migration-box a{color:#14213A;font-weight:600;text-decoration:underline}
+
+.faq-list{margin:32px 0 0;display:flex;flex-direction:column;gap:0}
+.faq-item{border-bottom:1px solid #DDD6C7}
+.faq-item:first-child{border-top:1px solid #DDD6C7}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;color:#14213A}
+.faq-q:hover{color:#146B4A}
+.faq-arrow{font-size:1.1rem;transition:transform .2s;flex-shrink:0;color:#5B617A}
+.faq-a{display:none;padding:0 0 20px;font-size:.9rem;color:#5B617A;line-height:1.7;font-family:'Inter',sans-serif}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"TaxRes CRM","url":"https://taxrescrm.net","email":"info@taxrescrm.net","description":"CRM software built specifically for tax resolution firms, developed by a practicing Enrolled Agent."}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is pricing per user?","acceptedAnswer":{"@type":"Answer","text":"Yes. TaxRes CRM is priced per user, per month. You only pay for the seats your team uses. Add or remove users at any time."}},
+{"@type":"Question","name":"Can I cancel anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. There are no long-term contracts. Cancel anytime with no penalties or fees."}},
+{"@type":"Question","name":"Is onboarding included?","acceptedAnswer":{"@type":"Answer","text":"Yes. All plans include onboarding. Enterprise plans include dedicated onboarding with direct access to the builder."}},
+{"@type":"Question","name":"Can you help migrate my data from Canopy or TaxDome?","acceptedAnswer":{"@type":"Answer","text":"Yes. We help firms switching from Canopy, TaxDome, or spreadsheets migrate their practice data and get their team up and running."}},
+{"@type":"Question","name":"Is there a setup fee or contract?","acceptedAnswer":{"@type":"Answer","text":"No setup fees and no long-term contracts. Month-to-month billing with no lock-in."}},
+{"@type":"Question","name":"Is my data secure?","acceptedAnswer":{"@type":"Answer","text":"Yes. TaxRes CRM is built on enterprise-grade infrastructure with row-level security, encrypted data at rest and in transit, and strict tenant isolation so your firm's data is never accessible to other firms."}}
+]}
 </script>
 </head>
 <body>
@@ -168,6 +193,15 @@
     </div>
   </div>
 
+  <!-- Migration callout -->
+  <div class="migration-box">
+    <div class="migration-icon">🔄</div>
+    <div>
+      <h3>Switching from Canopy or TaxDome?</h3>
+      <p>We'll help migrate your practice data and get your team up and running — so the switch doesn't cost you a week of productivity. <a data-link="book" href="#">Book a demo</a> to talk through your situation.</p>
+    </div>
+  </div>
+
   <!-- Why TaxRes CRM -->
   <div style="margin-top:72px;text-align:center">
     <p class="eyebrow">Why firms choose TaxRes CRM</p>
@@ -180,6 +214,63 @@
     <div class="why-item"><div class="why-check"></div><span>Secure client portal your clients can actually use</span></div>
     <div class="why-item"><div class="why-check"></div><span>Purpose-built case management for the full resolution lifecycle</span></div>
     <div class="why-item"><div class="why-check"></div><span>Built by a practicing EA — not a software company guessing at your workflow</span></div>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:72px;max-width:760px">
+    <p class="eyebrow">FAQ</p>
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);color:var(--ink);margin:12px 0 0;line-height:1.15">Common questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Is pricing per user?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">Yes. TaxRes CRM is priced per user, per month. You only pay for the seats your team uses. Add or remove users at any time — your bill adjusts accordingly.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Can I cancel anytime?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">Yes. No long-term contracts, no cancellation fees. Cancel anytime and you won't be billed for the following month.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Is onboarding included?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">Yes. All plans include onboarding to get your firm set up. Enterprise plans include dedicated onboarding with direct access to the builder — a practicing Enrolled Agent who can walk through your specific resolution workflows.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Can you help migrate my data from Canopy or TaxDome?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">Yes. If you're switching from Canopy, TaxDome, or spreadsheets, we'll help you migrate your practice data and get your team up and running. The goal is zero disruption to your active cases during the transition.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Is there a setup fee or contract?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">No setup fees and no contracts. Month-to-month billing from day one. You pay for what you use and nothing else.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Is my data secure?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">Yes. TaxRes CRM is built on enterprise-grade infrastructure with row-level security, encrypted data at rest and in transit, and strict tenant isolation — your firm's client data is never accessible to other firms on the platform. IRS forms, transcripts, and client communications are handled with the same security posture required for tax practice data.</div>
+      </div>
+
+    </div>
   </div>
 
 </div>
@@ -209,5 +300,14 @@
     <span><a data-email="contact" href="#" style="color:inherit;opacity:.7">info@taxrescrm.net</a></span>
   </div>
 </footer>
+
+<script>
+function toggleFaq(btn) {
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); el.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+  if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+}
+</script>
 </body>
 </html>
