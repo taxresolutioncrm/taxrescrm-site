@@ -22,7 +22,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(247,245,240,.92);backdrop-f
 .nav-links a:hover{color:var(--ink)}
 .btn{display:inline-block;background:#14213A;color:#C4A44A;text-decoration:none;font-weight:700;font-size:.95rem;padding:.72rem 1.35rem;border-radius:6px;border:2px solid #14213A;letter-spacing:.01em;transition:background .15s,border-color .15s}
 .btn:hover{background:#1e3050;border-color:#1e3050}
-.btn.ghost{background:transparent;color:#C4A44A;border:2px solid #C4A44A}
+.btn.ghost{background:transparent;color:#14213A;border:2px solid #14213A}
 
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
 
