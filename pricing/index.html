@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing | TaxRes CRM</title>
-<meta name="description" content="TaxRes CRM pricing — contact us to discuss plans for your tax resolution firm.">
+<meta name="description" content="TaxRes CRM pricing — $65, $75, and $85 per user per month. Purpose-built for tax resolution firms.">
 <link rel="canonical" href="https://taxrescrm.net/pricing">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://taxrescrm.net/pricing">
 <meta property="og:title" content="Pricing | TaxRes CRM">
-<meta property="og:description" content="TaxRes CRM pricing — contact us to discuss plans for your tax resolution firm.">
+<meta property="og:description" content="TaxRes CRM pricing — $65, $75, and $85 per user per month. Purpose-built for tax resolution firms.">
 <meta property="og:image" content="https://taxrescrm.net/assets/img/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
@@ -20,6 +20,39 @@
 <link rel="stylesheet" href="/assets/css/site.css?v=8">
 <script src="/assets/js/config.js" defer></script>
 <script src="/assets/js/site.js" defer></script>
+<style>
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:56px 0 0}
+@media(max-width:860px){.pricing-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}}
+.pricing-card{background:#fff;border:1.5px solid #DDD6C7;border-radius:14px;padding:36px 32px 40px;position:relative;display:flex;flex-direction:column}
+.pricing-card.featured{border:2.5px solid #14213A;box-shadow:0 8px 32px rgba(20,33,58,.10)}
+.badge-wrap{position:absolute;top:-14px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.badge{background:#14213A;color:#C4A44A;font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;border-radius:20px}
+.plan-name{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:800;color:#14213A;text-transform:uppercase;letter-spacing:.06em;margin:0 0 18px}
+.plan-price{font-family:'Manrope',sans-serif;font-size:3rem;font-weight:800;color:#14213A;line-height:1;margin:0}
+.plan-price span{font-size:1.1rem;font-weight:600;vertical-align:super;margin-right:2px}
+.plan-period{font-size:.82rem;color:#5B617A;margin:5px 0 0;font-family:'Inter',sans-serif}
+.plan-tagline{font-size:.9rem;color:#5B617A;line-height:1.55;margin:18px 0 24px;padding-top:18px;border-top:1px solid #DDD6C7;font-family:'Inter',sans-serif}
+.plan-features{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:11px;flex:1}
+.plan-features li{font-size:.9rem;color:#2A3A5C;display:flex;align-items:flex-start;gap:10px;font-family:'Inter',sans-serif;line-height:1.4}
+.plan-features li::before{content:'';width:16px;height:16px;background:#146B4A;border-radius:50%;flex-shrink:0;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5l3 3 6-6' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:cover}
+.plan-features .inherited{color:#5B617A}
+.plan-cta{margin-top:auto}
+.plan-cta .btn{width:100%;text-align:center;padding:13px;font-size:.95rem;box-sizing:border-box}
+.plan-cta .btn.featured-btn{background:#C4A44A;border-color:#C4A44A;color:#14213A}
+.plan-cta .btn.featured-btn:hover{background:#b5943b;border-color:#b5943b}
+
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:32px 0 0}
+@media(max-width:720px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.why-grid{grid-template-columns:1fr}}
+.why-item{background:#fff;border:1px solid #DDD6C7;border-radius:10px;padding:16px 18px;display:flex;align-items:flex-start;gap:12px}
+.why-check{width:20px;height:20px;background:#146B4A;border-radius:50%;flex-shrink:0;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 8.5l3 3 6-6' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:cover}
+.why-item span{font-size:.9rem;color:#2A3A5C;font-family:'Inter',sans-serif;line-height:1.4}
+
+.trust-strip{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin:52px 0 0;padding:32px 24px;background:#fff;border:1px solid #DDD6C7;border-radius:12px;text-align:center}
+.trust-item{display:flex;flex-direction:column;gap:4px}
+.trust-item strong{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:800;color:#14213A}
+.trust-item span{font-size:.82rem;color:#5B617A;font-family:'Inter',sans-serif}
+</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"TaxRes CRM","url":"https://taxrescrm.net","email":"info@taxrescrm.net","description":"CRM software built specifically for tax resolution firms, developed by a practicing Enrolled Agent."}
 </script>
@@ -35,31 +68,132 @@
       <a href="/features">Features</a>
       <a href="/about">About</a>
       <a href="/pricing" aria-current="page">Pricing</a>
-      <a href="/resources" >Resources</a>
-      <a href="/contact" >Contact</a>
+      <a href="/resources">Resources</a>
+      <a href="/contact">Contact</a>
       <a class="btn" data-link="book" href="#">Book a Demo</a>
     </div>
   </div>
 </nav>
+
 <main>
-<div style="padding:72px 24px 80px;max-width:780px;margin:0 auto">
-  <p class="eyebrow">Pricing</p>
-  <h1 style="font-size:clamp(2rem,4vw,3rem);margin:14px 0 28px;line-height:1.08;color:var(--ink)">Pricing details are coming soon</h1>
-  <p style="font-size:17px;line-height:1.75;color:var(--mut);margin:0 0 20px">TaxRes CRM is priced per seat. Pricing details will be published here once subscription tiers are finalized.</p><p style="font-size:15px;line-height:1.75;color:var(--mut)">In the meantime, book a demonstration. Pricing and fit for your firm can be discussed directly with the builder during the walkthrough.</p>
-  <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
-    <a class="btn" data-link="book" href="#">Book a Demo</a>
-    <a class="btn ghost" href="/features">Explore Features →</a>
+<div style="padding:72px 24px 96px;max-width:1080px;margin:0 auto">
+
+  <div style="text-align:center;max-width:620px;margin:0 auto">
+    <p class="eyebrow">Pricing</p>
+    <h1 style="font-size:clamp(2rem,4vw,2.8rem);margin:14px 0 18px;line-height:1.08;color:var(--ink)">Simple, transparent pricing for tax resolution firms</h1>
+    <p style="font-size:1.05rem;line-height:1.7;color:var(--mut);margin:0">Per user, per month. No setup fees. No long-term contracts. Cancel anytime.</p>
   </div>
+
+  <div class="pricing-grid">
+
+    <!-- Starter -->
+    <div class="pricing-card">
+      <div class="plan-name">Starter</div>
+      <div class="plan-price"><span>$</span>65</div>
+      <div class="plan-period">per user / month</div>
+      <p class="plan-tagline">Perfect for solo EAs, CPAs, and tax attorneys.</p>
+      <ul class="plan-features">
+        <li>Client Management</li>
+        <li>Case Management</li>
+        <li>IRS Workflows</li>
+        <li>Transcript Import</li>
+        <li>Form 2848 &amp; 8821 Generation</li>
+        <li>433 Form Generation</li>
+        <li>Document Portal</li>
+        <li>Secure Client Portal</li>
+        <li>Calendar &amp; Tasks</li>
+        <li>Email Support</li>
+      </ul>
+      <div class="plan-cta">
+        <a class="btn ghost" data-link="book" href="#">Book a Demo</a>
+      </div>
+    </div>
+
+    <!-- Professional (featured) -->
+    <div class="pricing-card featured">
+      <div class="badge-wrap"><span class="badge">Most Popular</span></div>
+      <div class="plan-name">Professional</div>
+      <div class="plan-price"><span>$</span>75</div>
+      <div class="plan-period">per user / month</div>
+      <p class="plan-tagline">Perfect for growing firms.</p>
+      <ul class="plan-features">
+        <li class="inherited">Everything in Starter, plus:</li>
+        <li>Workflow Automation</li>
+        <li>Team Collaboration</li>
+        <li>Internal Notes &amp; Mentions</li>
+        <li>Advanced Reporting</li>
+        <li>Custom Templates</li>
+        <li>Priority Support</li>
+      </ul>
+      <div class="plan-cta">
+        <a class="btn featured-btn" data-link="book" href="#">Book a Demo</a>
+      </div>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="pricing-card">
+      <div class="plan-name">Enterprise</div>
+      <div class="plan-price"><span>$</span>85</div>
+      <div class="plan-period">per user / month</div>
+      <p class="plan-tagline">For firms that need advanced administration and priority support.</p>
+      <ul class="plan-features">
+        <li class="inherited">Everything in Professional, plus:</li>
+        <li>Advanced User Permissions</li>
+        <li>Multi-office Support <span style="color:#5B617A;font-size:.8rem">(Coming Soon)</span></li>
+        <li>API Access <span style="color:#5B617A;font-size:.8rem">(Coming Soon)</span></li>
+        <li>Dedicated Onboarding</li>
+        <li>Priority Feature Requests</li>
+        <li>Premium Support</li>
+      </ul>
+      <div class="plan-cta">
+        <a class="btn ghost" data-link="book" href="#">Book a Demo</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Trust strip -->
+  <div class="trust-strip">
+    <div class="trust-item">
+      <strong>No setup fees</strong>
+      <span>Start immediately</span>
+    </div>
+    <div class="trust-item">
+      <strong>No long-term contracts</strong>
+      <span>Month-to-month</span>
+    </div>
+    <div class="trust-item">
+      <strong>Cancel anytime</strong>
+      <span>No penalties</span>
+    </div>
+  </div>
+
+  <!-- Why TaxRes CRM -->
+  <div style="margin-top:72px;text-align:center">
+    <p class="eyebrow">Why firms choose TaxRes CRM</p>
+    <h2 style="font-size:clamp(1.4rem,3vw,1.9rem);color:var(--ink);margin:12px 0 0;line-height:1.15">Built for resolution work. Not adapted from something else.</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-item"><div class="why-check"></div><span>IRS-first workflows designed around how resolution actually works</span></div>
+    <div class="why-item"><div class="why-check"></div><span>Transcript parsing built in — no third-party tool required</span></div>
+    <div class="why-item"><div class="why-check"></div><span>Built-in IRS form generation (2848, 8821, 433-F, 433-B)</span></div>
+    <div class="why-item"><div class="why-check"></div><span>Secure client portal your clients can actually use</span></div>
+    <div class="why-item"><div class="why-check"></div><span>Purpose-built case management for the full resolution lifecycle</span></div>
+    <div class="why-item"><div class="why-check"></div><span>Built by a practicing EA — not a software company guessing at your workflow</span></div>
+  </div>
+
 </div>
 </main>
+
 <section style="background:var(--ink);padding:72px 24px;text-align:center">
   <div class="wrap" style="max-width:640px">
-    <h2 style="color:#fff;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 14px;line-height:1.15">Book a demo to discuss pricing</h2>
-    <p style="color:#a0b0c0;font-size:15px;margin:0 0 28px;line-height:1.6">Pricing is discussed directly during the demonstration — no pricing page required.</p>
+    <h2 style="color:#fff;font-size:clamp(1.5rem,3vw,2rem);margin:0 0 14px;line-height:1.15">See it running on a real resolution workflow</h2>
+    <p style="color:#a0b0c0;font-size:15px;margin:0 0 28px;line-height:1.6">Book a demo with the builder — a practicing Enrolled Agent, not a sales rep. Bring your questions.</p>
     <a class="btn" data-link="book" href="#" style="background:#14213A;border-color:#14213A;font-size:15px;padding:14px 36px">Book a Demo</a>
-    <p style="color:#607080;font-size:13px;margin:16px 0 0">Live walkthrough with the builder — a practicing Enrolled Agent, not a sales rep.</p>
+    <p style="color:#607080;font-size:13px;margin:16px 0 0">30 minutes. Live walkthrough. No pressure.</p>
   </div>
 </section>
+
 <footer>
   <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#8899aa;padding:28px 24px">
     <div style="display:flex;flex-direction:column;gap:8px">
