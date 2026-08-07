@@ -56,3 +56,16 @@
 - All ghost buttons: gold outline (`#C4A44A`) sitewide
 - All contact: `info@taxrescrm.net`
 - Zero `.org` references
+
+---
+
+## v1.1.0 — In Progress
+
+### Resource Center
+- Added `/resources/understanding-irs-transaction-codes` — Article 2
+- Updated `/resources` index with Article 2 card
+- Updated `sitemap.xml` — 18 URLs
+
+### Search Console — Request Indexing
+- [ ] `https://taxrescrm.net/resources/understanding-irs-transaction-codes`
+- [ ] `https://taxrescrm.net/resources/` (updated index)
